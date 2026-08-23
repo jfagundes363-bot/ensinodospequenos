@@ -16,9 +16,9 @@ const slideVariants: Variants = {
     opacity: 1,
     scale: 1,
     transition: {
-      x: { type: 'spring' as const, stiffness: 280, damping: 28, mass: 0.8 },
-      opacity: { duration: 0.3, ease: [0.25, 1, 0.5, 1] },
-      scale: { duration: 0.3, ease: [0.25, 1, 0.5, 1] },
+      x: { type: 'spring', stiffness: 280, damping: 28, mass: 0.8 },
+      opacity: { duration: 0.3 },
+      scale: { duration: 0.3 },
     },
   },
   exit: (direction: number) => ({
@@ -27,9 +27,9 @@ const slideVariants: Variants = {
     opacity: 0,
     scale: 0.97,
     transition: {
-      x: { type: 'spring' as const, stiffness: 280, damping: 28, mass: 0.8 },
-      opacity: { duration: 0.2, ease: [0.4, 0, 1, 1] },
-      scale: { duration: 0.2, ease: [0.4, 0, 1, 1] },
+      x: { type: 'spring', stiffness: 280, damping: 28, mass: 0.8 },
+      opacity: { duration: 0.2 },
+      scale: { duration: 0.2 },
     },
   }),
 };

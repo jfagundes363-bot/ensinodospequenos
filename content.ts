@@ -317,7 +317,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       { text: 'Acesso Vitalício + Atualizações Futuras', included: true },
     ],
     ctaText: 'QUERO O KIT COMPLETO - R$ 24,90',
-    checkoutUrl: 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O69QM30',
+    checkoutUrl: 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O5MDLW9',
     isPopular: true,
   },
 ];
@@ -346,7 +346,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-5',
     question: 'Qual a diferença entre o Plano Básico e o Kit Completo?',
-    answer: 'O Plano Básico (R$ 12,90) entrega as atividades fundamentais introdutórias de alfabeto e traçado. O Kit Completo (R$ 29,90) inclui todos os módulos avançados (sílabas, pequenas leituras, jogos lúdicos) mais os 5 bônus exclusivos.',
+    answer: 'O Plano Básico (R$ 12,90) entrega as atividades fundamentais introdutórias de alfabeto e traçado. O Kit Completo (R$ 24,90) inclui todos os módulos avançados (sílabas, pequenas leituras, jogos lúdicos) mais os 5 bônus exclusivos.',
   },
   {
     id: 'faq-6',

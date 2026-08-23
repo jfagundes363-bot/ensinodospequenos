@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, Lock, ShieldCheck, Sparkles, Star, X, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Gift, Lock, ShieldCheck, Sparkles, Star, X, Zap } from 'lucide-react';
 import { PRICING_PLANS } from '../data/content';
 import { PricingPlan } from '../types';
 
@@ -144,8 +144,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
           {/* Imagem Solta dentro do Card */}
           <div className="w-full mt-4 mb-4">
             <img
-              src="https://i.imgur.com/1hHOmAm.png"
-              alt="Kit Completo de Alfabetização com Todos os Bônus - R$ 29,90"
+              src="https://i.imgur.com/YQ7Tl0o.png"
+              alt="Kit Completo de Alfabetização com Todos os Bônus - R$ 24,90"
               className="w-full h-auto max-h-72 object-contain mx-auto block rounded-2xl"
               loading="eager"
               decoding="async"
@@ -209,13 +209,14 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
 
                 {/* Bloco de Destaque / Chamada dos 5 Bônus */}
                 <li className="pt-2 pb-0.5">
-                  <div className="bg-white text-[#FF1493] py-1.5 px-3 rounded-xl border border-pink-200 shadow-xs flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 font-black text-[11px] sm:text-xs uppercase tracking-wide text-[#FF1493]">
-                      <span className="underline decoration-[#FF1493] decoration-2 underline-offset-2 font-black text-[#FF1493]">
+                  <div className="bg-gradient-to-r from-pink-500 via-[#E64394] to-rose-600 text-white py-1.5 px-3 rounded-xl shadow-xs flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 font-black text-[11px] sm:text-xs uppercase tracking-wide">
+                      <Gift className="w-4 h-4 fill-white shrink-0" />
+                      <span className="underline decoration-2 underline-offset-2 font-black">
                         OFERTA ESPECIAL: 5 SUPER BÔNUS INCLUSOS
                       </span>
                     </div>
-                    <span className="text-[9px] sm:text-[10px] font-black bg-pink-50 text-[#FF1493] border border-[#FF1493]/30 px-2 py-0.5 rounded-md uppercase tracking-wider shadow-2xs">
+                    <span className="text-[9px] sm:text-[10px] font-black bg-white text-[#E64394] px-2 py-0.5 rounded-md uppercase tracking-wider shadow-2xs">
                       GRÁTIS HOJE
                     </span>
                   </div>
@@ -228,7 +229,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     <strong className="text-pink-900 font-extrabold underline decoration-[#E64394] decoration-2 underline-offset-2">
                       BÔNUS 1: Módulo Sílaba Alfabético
                     </strong>{' '}
-                    <span className="text-pink-900 font-medium">(sílabas simples, junções e sons fundamentais)</span>
+                    <span className="text-gray-700 font-medium">(sílabas simples, junções e sons fundamentais)</span>
                   </span>
                 </li>
 
@@ -239,7 +240,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     <strong className="text-pink-900 font-extrabold underline decoration-[#E64394] decoration-2 underline-offset-2">
                       BÔNUS 2: Módulo Sílabas Complexas
                     </strong>{' '}
-                    <span className="text-pink-900 font-medium">(famílias silábicas avançadas: CH, LH, NH, etc.)</span>
+                    <span className="text-gray-700 font-medium">(famílias silábicas avançadas: CH, LH, NH, etc.)</span>
                   </span>
                 </li>
 
@@ -250,7 +251,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     <strong className="text-pink-900 font-extrabold underline decoration-[#E64394] decoration-2 underline-offset-2">
                       BÔNUS 3: Módulo Pré-Silábicos
                     </strong>{' '}
-                    <span className="text-pink-900 font-medium">(consciência fonológica e treino auditivo infantil)</span>
+                    <span className="text-gray-700 font-medium">(consciência fonológica e treino auditivo infantil)</span>
                   </span>
                 </li>
 
@@ -261,7 +262,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     <strong className="text-pink-900 font-extrabold underline decoration-[#E64394] decoration-2 underline-offset-2">
                       BÔNUS 4: Formação de Palavras
                     </strong>{' '}
-                    <span className="text-pink-900 font-medium">(frases ilustradas e primeiras leituras guiadas)</span>
+                    <span className="text-gray-700 font-medium">(frases ilustradas e primeiras leituras guiadas)</span>
                   </span>
                 </li>
 
@@ -272,7 +273,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     <strong className="text-pink-900 font-extrabold underline decoration-[#E64394] decoration-2 underline-offset-2">
                       BÔNUS 5: Canções Infantis
                     </strong>{' '}
-                    <span className="text-pink-900 font-medium">(cantigas clássicas ilustradas para cantar e colorir)</span>
+                    <span className="text-gray-700 font-medium">(cantigas clássicas ilustradas para cantar e colorir)</span>
                   </span>
                 </li>
               </ul>

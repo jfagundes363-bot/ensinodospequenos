@@ -71,13 +71,6 @@ export const UpgradeOfferModal: React.FC<UpgradeOfferModalProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).fbq) {
-                    (window as any).fbq('track', 'InitiateCheckout', {
-                      content_name: 'Kit Completo + 5 Bônus (Oferta Especial R$ 18,90)',
-                      value: 18.9,
-                      currency: 'BRL',
-                    });
-                  }
                   onAcceptUpgrade();
                 }}
                 id="btn-aceitar-upgrade-1890"

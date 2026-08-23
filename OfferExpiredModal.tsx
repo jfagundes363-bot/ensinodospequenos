@@ -75,7 +75,7 @@ export const OfferExpiredModal: React.FC<OfferExpiredModalProps> = ({
                 className="w-full touch-target-btn bg-gradient-to-r from-[#FF69B4] to-[#E64394] hover:from-[#FF77BC] hover:to-[#C72477] active:scale-[0.98] text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5 fill-white shrink-0" />
-                <span>Leve tudo por R$ 24,90</span>
+                <span>Leve tudo por 24,90</span>
                 <ArrowRight className="w-3.5 h-3.5 shrink-0" />
               </button>
 

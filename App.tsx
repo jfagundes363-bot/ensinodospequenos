@@ -46,7 +46,7 @@ export default function App() {
     'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O69QM30'
   );
   const [completeCheckoutUrl, setCompleteCheckoutUrl] = useState<string>(
-    'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O69QM30'
+    'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O5MDLW9'
   );
   const [upgradeCheckoutUrl, setUpgradeCheckoutUrl] = useState<string>(
     'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=XMC7R1U'
@@ -56,6 +56,20 @@ export default function App() {
     const offerSection = document.getElementById('ofertas-section');
     if (offerSection) {
       offerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const trackPixelCheckout = (value: number, contentName: string) => {
+    try {
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'InitiateCheckout', {
+          value,
+          currency: 'BRL',
+          content_name: contentName,
+        });
+      }
+    } catch {
+      // Ignore errors if pixel is blocked
     }
   };
 
@@ -71,6 +85,7 @@ export default function App() {
       ...plan,
       checkoutUrl: targetUrl,
     };
+    trackPixelCheckout(updatedPlan.priceValue, updatedPlan.name);
     setSelectedPlan(updatedPlan);
   };
 
@@ -85,6 +100,7 @@ export default function App() {
 
   const handleAcceptUpgrade = () => {
     setIsUpgradeModalOpen(false);
+    trackPixelCheckout(18.9, 'Upgrade Kit Completo - R$ 18,90');
     if (upgradeCheckoutUrl && upgradeCheckoutUrl.startsWith('http')) {
       window.open(upgradeCheckoutUrl, '_blank');
       return;
@@ -135,6 +151,7 @@ export default function App() {
       discountBadge: '67% OFF',
       checkoutUrl: completeCheckoutUrl,
     };
+    trackPixelCheckout(24.9, 'Kit Completo Promocional - R$ 24,90');
     setIsExpiredModalOpen(false);
     setSelectedPlan(updatedPlan);
   };
@@ -150,7 +167,7 @@ export default function App() {
       window.open(url, '_blank');
     } else {
       alert(
-        'Simulação de Checkout Seguro:\n\nEm um ambiente de produção, este botão redireciona o cliente para a plataforma de pagamento (Kiwify, Hotmart, Eduzz, etc.).\n\nVocê pode configurar o link real no botão "Links de Checkout" no topo da página!'
+        'Simulação de Checkout Seguro:\n\nEm um ambiente de produção, este botão redireciona o cliente para a plataforma de pagamento.\n\nVocê pode configurar o link real no botão "Links de Checkout" no topo da página!'
       );
     }
   };
@@ -178,8 +195,8 @@ export default function App() {
         {/* 03. COMO FUNCIONA (4 Passos - Simples e Rápido) */}
         <HowItWorksSection />
 
-        {/* 04. GALERIA INTERATIVA / DEMONSTRAÇÃO (Carrossel Horizontal + Tudo em um único material) */}
-        <InteractiveGallerySection onSelectActivity={(act) => setSelectedActivity(act)} />
+        {/* 04. GALERIA INTERATIVA / DEMONSTRAÇÃO (Carrossel Duplo Horizontal sem espaçamento) */}
+        <InteractiveGallerySection />
 
         {/* 05. ROTINA 1x1 (Uma rotina simples de 15 a 20 minutos por dia) */}
         <WhyItWorksSection />

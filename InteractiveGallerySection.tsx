@@ -1,18 +1,13 @@
 import React from 'react';
 import { GALLERY_ROW_TOP, GALLERY_ROW_BOTTOM } from '../data/content';
-import { ActivitySlide } from '../types';
 
-interface InteractiveGallerySectionProps {
-  onSelectActivity?: (activity: ActivitySlide) => void;
-}
-
-export const InteractiveGallerySection: React.FC<InteractiveGallerySectionProps> = ({ onSelectActivity }) => {
+export const InteractiveGallerySection: React.FC = () => {
   // Duplicating each array once creates the seamless 0% -> -50% CSS infinite loop
   const topItems = [...GALLERY_ROW_TOP, ...GALLERY_ROW_TOP];
   const bottomItems = [...GALLERY_ROW_BOTTOM, ...GALLERY_ROW_BOTTOM];
 
   return (
-    <section className="py-8 w-full max-w-[430px] mx-auto overflow-hidden" id="galeria-section">
+    <section className="py-8 w-full max-w-[430px] sm:max-w-xl mx-auto overflow-hidden" id="galeria-section">
       {/* Section Header */}
       <div className="px-4 text-center mb-5">
         <span className="text-[11px] font-extrabold uppercase tracking-wider text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-100 inline-block">
@@ -26,24 +21,24 @@ export const InteractiveGallerySection: React.FC<InteractiveGallerySectionProps>
         </p>
       </div>
 
-      {/* Double Opposing Continuous Slow Infinite Carousels */}
-      <div className="relative space-y-3.5 sm:space-y-4 overflow-hidden py-1">
+      {/* Double Opposing Continuous Slow Infinite Carousels without Gaps */}
+      <div className="relative space-y-2 overflow-hidden py-1">
         {/* Soft Side Fade Masks for Seamless Edge Effect */}
         <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-12 z-10 bg-gradient-to-r from-[#FAF8F5] to-transparent pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-12 z-10 bg-gradient-to-l from-[#FAF8F5] to-transparent pointer-events-none" />
 
-        {/* TOP CAROUSEL: Moves Left to Right (LTR) slowly */}
-        <div className="overflow-hidden w-full">
-          <div className="animate-marquee-ltr gap-3 sm:gap-3.5 items-center">
+        {/* TOP CAROUSEL: Moves Left to Right (LTR) smoothly with 0 gap */}
+        <div className="overflow-hidden w-full select-none">
+          <div className="animate-marquee-ltr gap-0 items-center">
             {topItems.map((item, index) => (
               <div
                 key={`top-${item.id}-${index}`}
-                className="shrink-0 w-[140px] h-[200px] sm:w-[160px] sm:h-[225px] rounded-2xl bg-white shadow-xs border border-black p-1.5 flex items-center justify-center select-none"
+                className="shrink-0 w-[130px] h-[180px] sm:w-[155px] sm:h-[215px] bg-white border-y border-r first:border-l border-black/10 p-1 flex items-center justify-center select-none"
               >
                 <img
                   src={item.url}
                   alt={item.title}
-                  className="w-full h-full object-contain rounded-xl select-none pointer-events-none"
+                  className="w-full h-full object-contain select-none pointer-events-none"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
@@ -53,18 +48,18 @@ export const InteractiveGallerySection: React.FC<InteractiveGallerySectionProps>
           </div>
         </div>
 
-        {/* BOTTOM CAROUSEL: Moves Right to Left (RTL) slowly */}
-        <div className="overflow-hidden w-full">
-          <div className="animate-marquee-rtl gap-3 sm:gap-3.5 items-center">
+        {/* BOTTOM CAROUSEL: Moves Right to Left (RTL) smoothly with 0 gap */}
+        <div className="overflow-hidden w-full select-none">
+          <div className="animate-marquee-rtl gap-0 items-center">
             {bottomItems.map((item, index) => (
               <div
                 key={`bot-${item.id}-${index}`}
-                className="shrink-0 w-[140px] h-[200px] sm:w-[160px] sm:h-[225px] rounded-2xl bg-white shadow-xs border border-black p-1.5 flex items-center justify-center select-none"
+                className="shrink-0 w-[130px] h-[180px] sm:w-[155px] sm:h-[215px] bg-white border-y border-r first:border-l border-black/10 p-1 flex items-center justify-center select-none"
               >
                 <img
                   src={item.url}
                   alt={item.title}
-                  className="w-full h-full object-contain rounded-xl select-none pointer-events-none"
+                  className="w-full h-full object-contain select-none pointer-events-none"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
@@ -76,7 +71,7 @@ export const InteractiveGallerySection: React.FC<InteractiveGallerySectionProps>
       </div>
 
       {/* Textos Centralizados Embaixo dos Dois Carrosséis */}
-      <div className="px-4 mt-6 text-center">
+      <div className="px-4 mt-5 text-center">
         <p className="text-sm sm:text-base font-extrabold text-[#2D2A26] tracking-tight">
           Tudo em um único material.
         </p>

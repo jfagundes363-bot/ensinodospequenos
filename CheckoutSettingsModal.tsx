@@ -58,7 +58,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
         </div>
 
         <p className="text-xs text-gray-600">
-          Insira aqui os seus links de pagamento das plataformas como Applyfy, Kiwify, Hotmart, Eduzz, etc.
+          Insira aqui os seus links de pagamento das plataformas como Applyfy, Hotmart, Kiwify, Eduzz ou Braip.
         </p>
 
         <form onSubmit={handleSave} className="space-y-3.5 text-xs">
@@ -248,15 +248,6 @@ export const PlanCheckoutModal: React.FC<{
               href={plan.checkoutUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).fbq) {
-                  (window as any).fbq('track', 'InitiateCheckout', {
-                    content_name: plan.name,
-                    value: plan.priceValue,
-                    currency: 'BRL',
-                  });
-                }
-              }}
               className={`w-full touch-target-btn ${
                 isBasic
                   ? 'bg-gray-900 hover:bg-black text-white'
@@ -268,16 +259,7 @@ export const PlanCheckoutModal: React.FC<{
             </a>
           ) : (
             <button
-              onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).fbq) {
-                  (window as any).fbq('track', 'InitiateCheckout', {
-                    content_name: plan.name,
-                    value: plan.priceValue,
-                    currency: 'BRL',
-                  });
-                }
-                onProceedExternal(plan.checkoutUrl);
-              }}
+              onClick={() => onProceedExternal(plan.checkoutUrl)}
               className={`w-full touch-target-btn ${
                 isBasic
                   ? 'bg-gray-900 hover:bg-black text-white'

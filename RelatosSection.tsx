@@ -51,12 +51,12 @@ export const RelatosSection: React.FC = () => {
     center: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.28, ease: [0.25, 1, 0.5, 1] },
+      transition: { duration: 0.28 },
     },
     exit: (dir: number) => ({
       x: dir > 0 ? -40 : 40,
       opacity: 0,
-      transition: { duration: 0.2, ease: [0.4, 0, 1, 1] },
+      transition: { duration: 0.2 },
     }),
   };
 
