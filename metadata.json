@@ -1,0 +1,6 @@
+{
+  "name": "Kit Completo de Alfabetização",
+  "description": "Landing page de alta conversão para o Kit Completo de Alfabetização infantil com foco prioritário em dispositivos móveis (360px a 430px).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
