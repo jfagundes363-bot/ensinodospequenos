@@ -166,7 +166,7 @@
   transform: rotateY(180deg);
 }
 
-/* Infinite Marquee Animations for Double Carousel - Optimized transform with will-change */
+/* Infinite Marquee Animations for Double Carousel - Optimized transform with will-change and translate3d */
 @keyframes marquee-ltr {
   0% {
     transform: translate3d(-50%, 0, 0);
@@ -188,15 +188,19 @@
 .animate-marquee-ltr {
   display: flex;
   width: max-content;
-  animation: marquee-ltr 85s linear infinite;
+  animation: marquee-ltr 50s linear infinite;
   will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .animate-marquee-rtl {
   display: flex;
   width: max-content;
-  animation: marquee-rtl 85s linear infinite;
+  animation: marquee-rtl 50s linear infinite;
   will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 

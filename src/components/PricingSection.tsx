@@ -144,8 +144,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
           {/* Imagem Solta dentro do Card */}
           <div className="w-full mt-4 mb-4">
             <img
-              src="https://i.imgur.com/1hHOmAm.png"
-              alt="Kit Completo de Alfabetização com Todos os Bônus - R$ 29,90"
+              src="https://i.imgur.com/YQ7Tl0o.png"
+              alt="Kit Completo de Alfabetização com Todos os Bônus - R$ 24,90"
               className="w-full h-auto max-h-72 object-contain mx-auto block rounded-2xl"
               loading="eager"
               decoding="async"
@@ -290,7 +290,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                 className="w-full relative z-10 touch-target-btn bg-gradient-to-r from-[#FF69B4] to-[#E64394] hover:from-[#FF77BC] hover:to-[#C72477] active:scale-[0.98] text-white font-black text-xs sm:text-sm py-3.5 px-4 rounded-xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-tight text-center"
               >
                 <span>
-                  {isOfferExpired ? 'QUERO O KIT COMPLETO - R$ 75,00' : 'QUERO O KIT COMPLETO - R$ 29,90'}
+                  {isOfferExpired ? 'QUERO O KIT COMPLETO - R$ 75,00' : 'QUERO O KIT COMPLETO - R$ 24,90'}
                 </span>
                 <ArrowRight className="w-4 h-4 shrink-0" />
               </button>

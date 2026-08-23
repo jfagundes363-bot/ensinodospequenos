@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, type Variants } from 'motion/react';
 import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { RELATOS_IMAGENS_DATA } from '../data/content';
 
@@ -43,7 +43,7 @@ export const RelatosSection: React.FC = () => {
     touchEndX.current = null;
   };
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     enter: (dir: number) => ({
       x: dir > 0 ? 40 : -40,
       opacity: 0,
@@ -51,12 +51,12 @@ export const RelatosSection: React.FC = () => {
     center: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.28, ease: 'easeOut' },
+      transition: { duration: 0.28 },
     },
     exit: (dir: number) => ({
       x: dir > 0 ? -40 : 40,
       opacity: 0,
-      transition: { duration: 0.2, ease: 'easeIn' },
+      transition: { duration: 0.2 },
     }),
   };
 

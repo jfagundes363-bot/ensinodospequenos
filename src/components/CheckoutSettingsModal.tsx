@@ -16,7 +16,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
   onClose,
   basicUrl,
   completeUrl,
-  upgradeUrl = 'https://pay.kiwify.com.br/aloHppE',
+  upgradeUrl = 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=XMC7R1U',
   onSaveUrls,
 }) => {
   const [basic, setBasic] = useState(basicUrl);
@@ -58,21 +58,21 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
         </div>
 
         <p className="text-xs text-gray-600">
-          Insira aqui os seus links de pagamento das plataformas como Hotmart, Kiwify, Eduzz, Braip ou Cakto.
+          Insira aqui os seus links de pagamento das plataformas como Applyfy, Hotmart, Kiwify, Eduzz ou Braip.
         </p>
 
         <form onSubmit={handleSave} className="space-y-3.5 text-xs">
           {/* Complete plan link */}
           <div className="space-y-1">
             <label className="font-bold text-gray-800 flex items-center justify-between">
-              <span>Link do Kit Completo (R$ 29,90)</span>
+              <span>Link do Kit Completo (R$ 24,90)</span>
               <span className="text-[10px] text-orange-600 font-extrabold">Recomendado</span>
             </label>
             <input
               type="text"
               value={complete}
               onChange={(e) => setComplete(e.target.value)}
-              placeholder="https://pay.kiwify.com.br/..."
+              placeholder="https://checkout.applyfy.com.br/..."
               className="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-xs font-mono"
             />
           </div>
@@ -87,7 +87,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
               type="text"
               value={upgrade}
               onChange={(e) => setUpgrade(e.target.value)}
-              placeholder="https://pay.kiwify.com.br/..."
+              placeholder="https://checkout.applyfy.com.br/..."
               className="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 text-xs font-mono"
             />
           </div>
@@ -101,7 +101,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
               type="text"
               value={basic}
               onChange={(e) => setBasic(e.target.value)}
-              placeholder="https://pay.kiwify.com.br/..."
+              placeholder="https://checkout.applyfy.com.br/..."
               className="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-xs font-mono"
             />
           </div>
@@ -248,15 +248,6 @@ export const PlanCheckoutModal: React.FC<{
               href={plan.checkoutUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).fbq) {
-                  (window as any).fbq('track', 'InitiateCheckout', {
-                    content_name: plan.name,
-                    value: plan.priceValue,
-                    currency: 'BRL',
-                  });
-                }
-              }}
               className={`w-full touch-target-btn ${
                 isBasic
                   ? 'bg-gray-900 hover:bg-black text-white'
@@ -268,16 +259,7 @@ export const PlanCheckoutModal: React.FC<{
             </a>
           ) : (
             <button
-              onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).fbq) {
-                  (window as any).fbq('track', 'InitiateCheckout', {
-                    content_name: plan.name,
-                    value: plan.priceValue,
-                    currency: 'BRL',
-                  });
-                }
-                onProceedExternal(plan.checkoutUrl);
-              }}
+              onClick={() => onProceedExternal(plan.checkoutUrl)}
               className={`w-full touch-target-btn ${
                 isBasic
                   ? 'bg-gray-900 hover:bg-black text-white'

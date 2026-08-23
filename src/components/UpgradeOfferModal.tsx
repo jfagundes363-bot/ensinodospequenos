@@ -14,7 +14,7 @@ export const UpgradeOfferModal: React.FC<UpgradeOfferModalProps> = ({
   isOpen,
   onClose,
   onAcceptUpgrade,
-  upgradeUrl = 'https://pay.kiwify.com.br/aloHppE',
+  upgradeUrl = 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=XMC7R1U',
 }) => {
   return (
     <AnimatePresence>
@@ -71,13 +71,6 @@ export const UpgradeOfferModal: React.FC<UpgradeOfferModalProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && (window as any).fbq) {
-                    (window as any).fbq('track', 'InitiateCheckout', {
-                      content_name: 'Kit Completo + 5 Bônus (Oferta Especial R$ 18,90)',
-                      value: 18.9,
-                      currency: 'BRL',
-                    });
-                  }
                   onAcceptUpgrade();
                 }}
                 id="btn-aceitar-upgrade-1890"

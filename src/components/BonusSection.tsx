@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Gift, ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, type Variants } from 'motion/react';
 import { BONUSES_DATA, INSIDE_LOOK_SLIDES } from '../data/content';
 import { BonusMockupCard } from './WorksheetIllustrations';
 
-const slideVariants = {
+const slideVariants: Variants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 50 : -50,
     opacity: 0,
@@ -17,8 +17,8 @@ const slideVariants = {
     scale: 1,
     transition: {
       x: { type: 'spring', stiffness: 280, damping: 28, mass: 0.8 },
-      opacity: { duration: 0.3, ease: [0.25, 1, 0.5, 1] },
-      scale: { duration: 0.3, ease: [0.25, 1, 0.5, 1] },
+      opacity: { duration: 0.3 },
+      scale: { duration: 0.3 },
     },
   },
   exit: (direction: number) => ({
@@ -28,8 +28,8 @@ const slideVariants = {
     scale: 0.97,
     transition: {
       x: { type: 'spring', stiffness: 280, damping: 28, mass: 0.8 },
-      opacity: { duration: 0.2, ease: 'easeIn' },
-      scale: { duration: 0.2, ease: 'easeIn' },
+      opacity: { duration: 0.2 },
+      scale: { duration: 0.2 },
     },
   }),
 };
