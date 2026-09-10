@@ -41,15 +41,15 @@ export default function App() {
     }
   };
 
-  // Dynamic checkout links with default Applyfy URLs
+  // Dynamic checkout links with default Wiven URLs
   const [basicCheckoutUrl, setBasicCheckoutUrl] = useState<string>(
-    'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O69QM30'
+    'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=V4UECHF'
   );
   const [completeCheckoutUrl, setCompleteCheckoutUrl] = useState<string>(
-    'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O5MDLW9'
+    'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=F49YTGW'
   );
   const [upgradeCheckoutUrl, setUpgradeCheckoutUrl] = useState<string>(
-    'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=XMC7R1U'
+    'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=A44S2SS'
   );
 
   const scrollToOffers = () => {
@@ -101,34 +101,6 @@ export default function App() {
   const handleAcceptUpgrade = () => {
     setIsUpgradeModalOpen(false);
     trackPixelCheckout(18.9, 'Upgrade Kit Completo - R$ 18,90');
-    if (upgradeCheckoutUrl && upgradeCheckoutUrl.startsWith('http')) {
-      window.open(upgradeCheckoutUrl, '_blank');
-      return;
-    }
-    const upgradePlan: PricingPlan = {
-      id: 'upgrade_18',
-      name: 'Kit Completo + 5 Bônus (Oferta Especial)',
-      badge: '75% OFF • Super Oferta',
-      price: 'R$ 18,90',
-      priceValue: 18.9,
-      originalPrice: 'R$ 75,00',
-      discountBadge: '75% OFF',
-      periodText: 'Pagamento único • Acesso vitalício aos arquivos',
-      subheadline: 'Experiência completa + todos os materiais extras',
-      description: 'Aproveite a oportunidade e garanta a coleção completa de alfabetização com todos os 5 bônus por apenas R$ 18,90.',
-      features: [
-        { text: 'Kit Completo — Coleção completa de alfabetização pronta para imprimir', included: true, highlight: true },
-        { text: 'Acesso vitalício ao material em PDF de alta resolução', included: true, highlight: true },
-        { text: 'BÔNUS 1: Coleção de Jogos Fonéticos e Lúdicos', included: true },
-        { text: 'BÔNUS 2: Caderno de Caligrafia Prática & Traçado', included: true },
-        { text: 'BÔNUS 3: Cartões Sonoros de Vogais & Consoantes', included: true },
-        { text: 'BÔNUS 4: Bloco de Atividades de Junção Silábica', included: true },
-        { text: 'BÔNUS 5: Guia do Alfabetizador — Dicas práticas', included: true },
-      ],
-      ctaText: 'Garantir Tudo por R$ 18,90',
-      checkoutUrl: upgradeCheckoutUrl,
-    };
-    setSelectedPlan(upgradePlan);
   };
 
   const handleKeepBasic = () => {

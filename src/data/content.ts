@@ -290,7 +290,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       { text: 'Acesso Imediato após a confirmação', included: true },
     ],
     ctaText: 'QUERO O PLANO BÁSICO - R$ 12,90',
-    checkoutUrl: 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O69QM30',
+    checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=V4UECHF',
     isPopular: false,
   },
   {
@@ -317,7 +317,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       { text: 'Acesso Vitalício + Atualizações Futuras', included: true },
     ],
     ctaText: 'QUERO O KIT COMPLETO - R$ 24,90',
-    checkoutUrl: 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=O5MDLW9',
+    checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=F49YTGW',
     isPopular: true,
   },
 ];
