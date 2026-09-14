@@ -16,7 +16,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
   onClose,
   basicUrl,
   completeUrl,
-  upgradeUrl = 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=XMC7R1U',
+  upgradeUrl = 'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=A44S2SS',
   onSaveUrls,
 }) => {
   const [basic, setBasic] = useState(basicUrl);
@@ -58,7 +58,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
         </div>
 
         <p className="text-xs text-gray-600">
-          Insira aqui os seus links de pagamento das plataformas como Applyfy, Hotmart, Kiwify, Eduzz ou Braip.
+          Insira aqui os seus links de pagamento das plataformas como Wiven, Applyfy, Hotmart, Kiwify, Eduzz ou Braip.
         </p>
 
         <form onSubmit={handleSave} className="space-y-3.5 text-xs">
@@ -72,7 +72,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
               type="text"
               value={complete}
               onChange={(e) => setComplete(e.target.value)}
-              placeholder="https://checkout.applyfy.com.br/..."
+              placeholder="https://checkout.wiven.com.br/..."
               className="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-xs font-mono"
             />
           </div>
@@ -87,7 +87,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
               type="text"
               value={upgrade}
               onChange={(e) => setUpgrade(e.target.value)}
-              placeholder="https://checkout.applyfy.com.br/..."
+              placeholder="https://checkout.wiven.com.br/..."
               className="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 text-xs font-mono"
             />
           </div>
@@ -101,7 +101,7 @@ export const CheckoutSettingsModal: React.FC<CheckoutSettingsModalProps> = ({
               type="text"
               value={basic}
               onChange={(e) => setBasic(e.target.value)}
-              placeholder="https://checkout.applyfy.com.br/..."
+              placeholder="https://checkout.wiven.com.br/..."
               className="w-full px-3 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-xs font-mono"
             />
           </div>
@@ -153,7 +153,7 @@ export const PlanCheckoutModal: React.FC<{
   const isBasic = plan.id === 'basic';
   const productImage = isBasic
     ? 'https://i.imgur.com/r6nAgXa.png'
-    : 'https://i.imgur.com/1hHOmAm.png';
+    : 'https://i.imgur.com/YQ7Tl0o.png';
 
   const isExternalUrl =
     plan.checkoutUrl &&

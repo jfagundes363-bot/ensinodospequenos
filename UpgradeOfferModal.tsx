@@ -14,7 +14,7 @@ export const UpgradeOfferModal: React.FC<UpgradeOfferModalProps> = ({
   isOpen,
   onClose,
   onAcceptUpgrade,
-  upgradeUrl = 'https://checkout.applyfy.com.br/checkout/cmt5y7osn0q7901og8uoi1m1b?offer=XMC7R1U',
+  upgradeUrl = 'https://checkout.wiven.com.br/checkout/cmtuvxlqr08js01pq60b3s2dq?offer=A44S2SS',
 }) => {
   return (
     <AnimatePresence>
