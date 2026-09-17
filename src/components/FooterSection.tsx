@@ -2,8 +2,8 @@ import React from 'react';
 import { ShieldCheck, Instagram, Facebook } from 'lucide-react';
 
 export const FooterSection: React.FC = () => {
-  const instagramUrl = "https://www.instagram.com/ensinodospequenos/#";
-  const facebookUrl = "https://www.facebook.com/profile.php?id=61593207399471";
+  const instagramUrl = "https://www.instagram.com/mundoodospequenos/";
+  const facebookUrl = "https://www.facebook.com/profile.php?id=61594285948910";
 
   return (
     <footer className="w-full max-w-[430px] mx-auto py-8 px-4 text-center border-t border-gray-200/90 mt-4" id="footer-direitos-autorais">
@@ -32,10 +32,10 @@ export const FooterSection: React.FC = () => {
               rel="noopener noreferrer"
               id="link-social-instagram"
               className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#833ab4]/10 via-[#fd1d1d]/10 to-[#fcb045]/10 border border-pink-200 hover:border-pink-400 text-xs font-bold text-gray-900 shadow-2xs hover:shadow-xs transition-all active:scale-[0.98] cursor-pointer"
-              title="Instagram @ensinodospequenos"
+              title="Instagram Mundo dos Pequenos"
             >
               <Instagram className="w-4 h-4 text-[#E1306C] shrink-0" />
-              <span>@ensinodospequenos</span>
+              <span>Mundo dos Pequenos</span>
             </a>
 
             {/* Facebook Button */}
@@ -45,17 +45,17 @@ export const FooterSection: React.FC = () => {
               rel="noopener noreferrer"
               id="link-social-facebook"
               className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50/80 border border-blue-200 hover:border-blue-400 text-xs font-bold text-gray-900 shadow-2xs hover:shadow-xs transition-all active:scale-[0.98] cursor-pointer"
-              title="Facebook Ensino dos Pequenos"
+              title="Facebook Mundo dos Pequenos"
             >
               <Facebook className="w-4 h-4 text-[#1877F2] shrink-0 fill-[#1877F2]" />
-              <span>ensinodospequenos</span>
+              <span>Mundo dos Pequenos</span>
             </a>
           </div>
         </div>
 
         {/* Direitos Autorais e Políticas */}
         <div className="pt-3 border-t border-gray-100 text-[10px] text-gray-400 space-y-1">
-          <p>© {new Date().getFullYear()} Ensino dos Pequenos. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Mundo dos Pequenos. Todos os direitos reservados.</p>
           <p className="max-w-[340px] mx-auto leading-normal">
             Conteúdo digital protegido pela Lei de Direitos Autorais. É proibida a reprodução ou revenda não autorizada.
           </p>
